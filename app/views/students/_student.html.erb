@@ -24,4 +24,9 @@
     <%= student.dr_e_watching %>
   </p>
 
+  <% if student.profile_picture.present? %>
+    <%= rails_blob_path student.profile_picture %>
+    <%= image_tag student.profile_picture %>
+  <% end %>
+
 </div>

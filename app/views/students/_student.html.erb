@@ -25,8 +25,7 @@
   </p>
 
   <% if student.profile_picture.present? %>
-    <%= rails_blob_path student.profile_picture %>
-    <%= image_tag student.profile_picture %>
+    <%= image_tag(student.profile_picture.variant(:thumb)) %>
   <% end %>
 
 </div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Senseis</h1>
+
+<div id="senseis">
+  <% @senseis.each do |sensei| %>
+    <%= render sensei %>
+    <p>
+      <%= link_to "Show this sensei", sensei %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New sensei", new_sensei_path %>

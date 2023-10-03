@@ -1,0 +1,2 @@
+class Sensei < ApplicationRecord
+end

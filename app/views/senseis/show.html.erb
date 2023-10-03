@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @sensei %>
+
+<div>
+  <%= link_to "Edit this sensei", edit_sensei_path(@sensei) %> |
+  <%= link_to "Back to senseis", senseis_path %>
+
+  <%= button_to "Destroy this sensei", @sensei, method: :delete %>
+</div>

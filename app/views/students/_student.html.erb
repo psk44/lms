@@ -25,7 +25,7 @@
   </p>
 
   <% if student.profile_picture.present? %>
-    <%= image_tag(student.profile_picture) %>
+    <%= image_tag(student.profile_picture, :class => "img-thumbnail") %>
   <% end %>
 
 </div>

@@ -4,10 +4,12 @@
 
 <div id="students">
   <% @students.each do |student| %>
-    <%= render student %>
-    <p>
-      <%= link_to "Show this student", student %>
-    </p>
+    <div class="card">
+      <%= render student %>
+      <p>
+        <%= link_to "Show this student", student %>
+      </p>
+    </div>
   <% end %>
 </div>
 

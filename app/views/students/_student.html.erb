@@ -25,7 +25,7 @@
   </p>
 
   <% if student.profile_picture.present? %>
-    <%= image_tag(student.profile_picture.variant(:thumb)) %>
+    <%= image_tag(student.profile_picture) %>
   <% end %>
 
 </div>

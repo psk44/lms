@@ -8,6 +8,8 @@
     <%= f.input :description %>
   </div>
 
+  <%= f.association :sensei, label_method: :last_name %>
+
   <div class="form-actions">
     <%= f.button :submit %>
   </div>

@@ -24,6 +24,9 @@
     <%= form.check_box :dr_e_watching %>
   </div>
 
+
+  <%= form.association :courses, :as => :check_boxes %>
+
   <div>
     <%= form.submit :class => "btn btn-primary" %>
   </div>

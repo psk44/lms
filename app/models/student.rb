@@ -4,4 +4,7 @@ class Student < ApplicationRecord
     attachable.variant :thumb, resize_to_limit: [100, 100]
   end
 
+  def full_name
+    first_name + " " + last_name
+  end
 end

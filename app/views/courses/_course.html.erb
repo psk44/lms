@@ -14,4 +14,13 @@
     <%= course.sensei.last_name %>
   </p>
 
+  <p>
+    <strong>Students:</strong>
+    <ul>
+      <% course.students.each do |student| %>
+        <li><%= link_to student.full_name, student_path(student) %></li>
+      <% end %>
+    </ul>
+  </p>
+
 </div>

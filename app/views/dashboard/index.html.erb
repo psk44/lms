@@ -11,11 +11,11 @@
     </tr>
   </thead>
   <tbody>
-    <% Sensei.all.each do |sensei| %>
+    <% @senseis.each do |sensei| %>
       <tr>
         <td><%= sensei.full_name %></td>
         <td><%= sensei.courses.count %></td>
-        <td></td>
+        <td><%= sensei.students.count %></td>
       </tr>
     <% end %>
   </tbody>

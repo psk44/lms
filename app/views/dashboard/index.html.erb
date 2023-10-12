@@ -8,6 +8,7 @@
       <th>Name</th>
       <th>Courses</th>
       <th>Students</th>
+      <th>Compliant?</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +17,7 @@
         <td><%= sensei.full_name %></td>
         <td><%= sensei.courses.count %></td>
         <td><%= sensei.students.uniq.count %></td>
+        <td><%= sensei.compliant? %></td>
       </tr>
     <% end %>
   </tbody>

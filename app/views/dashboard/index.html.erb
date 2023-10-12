@@ -1,0 +1,22 @@
+<h1>Dashboard</h1>
+
+<h2>Senseis</h2>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Courses</th>
+      <th>Students</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% Sensei.all.each do |sensei| %>
+      <tr>
+        <td><%= sensei.full_name %></td>
+        <td><%= sensei.courses.count %></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

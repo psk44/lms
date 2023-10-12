@@ -15,7 +15,7 @@
       <tr>
         <td><%= sensei.full_name %></td>
         <td><%= sensei.courses.count %></td>
-        <td><%= sensei.students.count %></td>
+        <td><%= sensei.students.uniq.count %></td>
       </tr>
     <% end %>
   </tbody>

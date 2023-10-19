@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-sensei = Sensei.create({
+Sensei.create({
   :first_name => "Gandalf",
   :last_name => "The Wise"
 })
@@ -14,25 +14,33 @@ sensei = Sensei.create({
 student_hashes = [
   {
     :first_name => "Bilbo",
-    :last_name => "Baggins"
+    :last_name => "Baggins",
+    :offset_from_roy => rand(1..10)
   },
   {
     :first_name => "Frodo",
-    :last_name => "Baggins"
+    :last_name => "Baggins",
+    :offset_from_roy => rand(1..10)
   },
   {
     :first_name => "Pippin",
-    :last_name => "Took"
+    :last_name => "Took",
+    :offset_from_roy => rand(1..10)
   }
 ]
 
 Student.create(student_hashes)
+
 10.times do |index|
-  course = Course.create(
+  Course.create(
     :title => "Title #{index}",
     :description => "Description #{index}",
-    :sensei => sensei
+    :sensei => Sensei.first
   )
+end
 
-  course.students << Student.find(rand(1..3))
+3.times do
+  Student.all.each do |student|
+    student.courses << Course.find(rand(1..10))
+  end
 end

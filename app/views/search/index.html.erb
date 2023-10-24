@@ -1,0 +1,21 @@
+<h1>Search</h1>
+
+<%= form_with url: "/search", method: :get do |form| %>
+  <%= form.label :query, "Search for:" %>
+  <%= form.text_field :query, :value => @query %>
+  <%= form.submit "Search" %>
+<% end %>
+
+<p class="mt-3">You searched for '<%= @query %>'</p>
+
+<h2>Results</h2>
+
+<% if @courses.present? %>
+  <p>Hits: <%= @courses.count %></p>
+
+  <ul>
+    <% @courses.each do |c| %>
+      <li><%= c.title %></li>
+    <% end %>
+  </ul>
+<% end %>

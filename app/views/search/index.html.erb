@@ -5,7 +5,7 @@
   <%= form.text_field :query, :value => @query %>
 
   <%= form.label :sensei_id, "Filter by Sensei:" %>
-  <%= form.select :sensei_id, Sensei.all.map { |s| [s.full_name, s.id] }, :selected => @sensei_id %>
+  <%= form.select :sensei_id, Sensei.all.map { |s| [s.full_name, s.id] }, :selected => @sensei_id, :include_blank => true %>
 
   <%= form.submit "Search" %>
 <% end %>

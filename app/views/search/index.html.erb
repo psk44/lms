@@ -8,7 +8,9 @@
 
   <div>
     <%= form.label :sensei_id, "Filter by Sensei:", :class => "form-label" %>
-    <%= form.select :sensei_id, Sensei.all.map { |s| [s.full_name, s.id] }, { :selected => @sensei_id, :include_blank => true}, { :class => "form-select" } %>
+    <%= form.select :sensei_id, Sensei.all.map { |s| [s.full_name, s.id] },
+      { :selected => @sensei_id, :include_blank => true },
+      { :class => "form-select" } %>
   </div>
 
   <div>

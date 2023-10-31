@@ -1,6 +1,7 @@
 <h1>Search</h1>
 
 <%= form_with url: "/search", method: :get do |form| %>
+  
   <div>
     <%= form.label :query, "Search for:", :class => "form-label" %>
     <%= form.text_field :query, :value => @query, :class => "form-control" %>

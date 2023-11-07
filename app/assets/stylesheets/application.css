@@ -25,4 +25,7 @@ fieldset legend {
   display: flex;
   justify-content: space-between;
 }
-
+#authentication {
+  max-width: 20rem;
+  margin: 2rem auto;
+}

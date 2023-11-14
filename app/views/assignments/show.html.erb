@@ -3,8 +3,8 @@
 <%= render @assignment %>
 
 <div>
-  <%= link_to "Edit this assignment", edit_assignment_path(@assignment) %> |
-  <%= link_to "Back to assignments", assignments_path %>
+  <%= link_to "Edit this assignment", edit_course_assignment_path(@course, @assignment) %> |
+  <%= link_to "Back to assignments", course_assignments_path(@course) %>
 
-  <%= button_to "Destroy this assignment", @assignment, method: :delete %>
+  <%= button_to "Destroy this assignment", course_assignment_path(@course, @assignment), method: :delete %>
 </div>

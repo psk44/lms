@@ -6,7 +6,7 @@
   <% @assignments.each do |assignment| %>
     <%= render assignment %>
     <p>
-      <%= link_to "Show this assignment", assignment %>
+      <%= link_to "Show this assignment", course_assignment_path(@course, assignment) %>
     </p>
   <% end %>
 </div>

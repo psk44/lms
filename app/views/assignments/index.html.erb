@@ -1,3 +1,11 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to "Courses", courses_path %></li>
+    <li class="breadcrumb-item"><%= link_to @course.title, course_path(@course) %></li>
+    <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+  </ol>
+</nav>
+
 <p style="color: green"><%= notice %></p>
 
 <h1><%= @course.title %> - Assignments</h1>

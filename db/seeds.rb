@@ -13,16 +13,22 @@ Sensei.create({
 
 student_hashes = [
   {
+    :email => "bilbo@lms.local",
+    :password => "Pass1234",
     :first_name => "Bilbo",
     :last_name => "Baggins",
     :offset_from_roy => rand(1..10)
   },
   {
+    :email => "frodo@lms.local",
+    :password => "Pass1234",
     :first_name => "Frodo",
     :last_name => "Baggins",
     :offset_from_roy => rand(1..10)
   },
   {
+    :email => "pippin@lms.local",
+    :password => "Pass1234",
     :first_name => "Pippin",
     :last_name => "Took",
     :offset_from_roy => rand(1..10)

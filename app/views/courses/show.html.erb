@@ -1,10 +1,16 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to "Courses", courses_path %></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= @course.title %></li>
+  </ol>
+</nav>
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @course %>
 
 <div>
   <%= link_to "Edit this course", edit_course_path(@course) %> |
-  <%= link_to "Back to courses", courses_path %> |
   <%= link_to "Assignments", course_assignments_path(@course) %>
 
   <%= button_to "Destroy this course", @course, method: :delete %>

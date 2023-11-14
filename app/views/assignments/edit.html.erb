@@ -5,6 +5,6 @@
 <br>
 
 <div>
-  <%= link_to "Show this assignment", @assignment %> |
-  <%= link_to "Back to assignments", assignments_path %>
+  <%= link_to "Show this assignment", course_assignment_path(@course, @assignment) %> |
+  <%= link_to "Back to assignments", course_assignments_path(@course) %>
 </div>
